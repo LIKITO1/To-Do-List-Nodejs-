@@ -1,0 +1,71 @@
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+    }
+    form{
+        width: 40%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        background: gray;
+        border-radius: 50px;
+    }
+    h3{
+        font-size:3vw ;
+    }
+    label{
+        font-size: 2vw;
+    }
+    .btn{
+        width: 70%;
+        height: 12.5%;
+        border-radius: 10vw;
+        border:1px solid black;
+        background: black;
+        color: white;
+        font-weight: bold;
+        font-size: 2vw;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn:hover{
+        cursor: pointer;
+        background: rgb(75, 75, 75);
+    }
+    input{
+        width: 70%;
+        height: 10%;
+        border-radius: 50vw;
+        border: 1px solid black;
+        outline: none;
+        text-align: center;
+        font-size: 1.5vw;
+    }
+</style>
+<div class="container">
+    <form action="/processando" method="post">
+        <h3>Tarefas</h3>
+        <label for="tarefa">Tarefa:</label>
+        <input type="text" name="tarefa" id="tarefa" required>
+        <label for="description">Descrição:</label>
+        <input type="text" name="description" id="description">
+        <button type="submit" class="btn">Criar tarefa</button>
+        <a href="/processou" class="btn">Ver tarefas</a>
+    </form>
+</div>
