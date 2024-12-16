@@ -7,6 +7,7 @@ const sequelize=new Sequelize("tarefas","root","lucas312@Lucas",{
     host:"localhost",
     dialect:"mysql"
 })
+const port=process.env.PORT || 3001
 const Deveres=sequelize.define("deveres",{
     tarefa:{
         type:Sequelize.STRING
